@@ -62,25 +62,27 @@ export default function AddUserForm(props) {
   }
 
   return (
-    <Card>
-      <form className={styles.form} onSubmit={handleFormSubmit}>
-        <Input
-          id="username"
-          label="Username"
-          type="text"
-          value={username}
-          onChange={({ target }) => setUsername(target.value)}
-        />
-        <Input
-          id="age"
-          type="number"
-          label="Age (Years)"
-          value={age}
-          onChange={({ target }) => setAge(target.value)}
-        />
+    <>
+      <Card>
+        <form className={styles.form} onSubmit={handleFormSubmit}>
+          <Input
+            id="username"
+            label="Username"
+            type="text"
+            value={username}
+            onChange={({ target }) => setUsername(target.value)}
+          />
+          <Input
+            id="age"
+            type="number"
+            label="Age (Years)"
+            value={age}
+            onChange={({ target }) => setAge(target.value)}
+          />
 
-        <Button type="submit">Add User</Button>
-      </form>
+          <Button type="submit">Add User</Button>
+        </form>
+      </Card>
 
       {errorInfo.title && (
         <Modal
@@ -90,6 +92,6 @@ export default function AddUserForm(props) {
           {errorInfo.message}
         </Modal>
       )}
-    </Card>
+    </>
   );
 }
