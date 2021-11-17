@@ -12,15 +12,15 @@ export default function Modal(props) {
   return (
     <div className={styles.wrapper} onClick={handleClickOutsideModel}>
       <div className={styles.modal}>
-        <div className={styles.title}>
+        <header className={styles.title}>
           <h1>{props.title}</h1>
-        </div>
+        </header>
         <div className={styles.description}>
           <p>{props.children}</p>
         </div>
-        <div className={styles.button}>
+        <footer className={styles.button}>
           <Button onClick={props.onClose}>Okay</Button>
-        </div>
+        </footer>
       </div>
     </div>
   );
