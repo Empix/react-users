@@ -1,0 +1,16 @@
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list li {
+  font-weight: 1em;
+  border: 1px solid #adadad;
+  padding: 10px;
+}
+
+.empty-list {
+  text-align: center;
+}

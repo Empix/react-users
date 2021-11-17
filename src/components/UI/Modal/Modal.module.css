@@ -1,0 +1,39 @@
+.wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(34, 34, 34, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal {
+  max-width: 800px;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 1em;
+  padding: 16px;
+  font-weight: bold;
+  background-color: #7027a0;
+  color: #eee;
+}
+
+.description {
+  font-size: 1em;
+  padding: 16px;
+}
+
+.button {
+  font-size: 1em;
+  padding: 8px 16px 16px 16px;
+  display: flex;
+  justify-content: flex-end;
+}
