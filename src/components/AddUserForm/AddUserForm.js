@@ -30,7 +30,7 @@ export default function AddUserForm(props) {
       return;
     }
 
-    if (+age < 0) {
+    if (+age < 1) {
       setErrorInfo({
         title: 'Age must be positive',
         message: 'Please enter a positive age.',
