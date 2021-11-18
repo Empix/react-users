@@ -1,3 +1,4 @@
+import Portal from '../../Helpers/Portal';
 import Button from '../Button/Button';
 
 import styles from './Modal.module.css';
@@ -10,18 +11,20 @@ export default function Modal(props) {
   }
 
   return (
-    <div className={styles.wrapper} onClick={handleClickOutsideModel}>
-      <div className={styles.modal}>
-        <header className={styles.title}>
-          <h1>{props.title}</h1>
-        </header>
-        <div className={styles.description}>
-          <p>{props.children}</p>
+    <Portal targetSelector="#root">
+      <div className={styles.wrapper} onClick={handleClickOutsideModel}>
+        <div className={styles.modal}>
+          <header className={styles.title}>
+            <h1>{props.title}</h1>
+          </header>
+          <div className={styles.description}>
+            <p>{props.children}</p>
+          </div>
+          <footer className={styles.button}>
+            <Button onClick={props.onClose}>Okay</Button>
+          </footer>
         </div>
-        <footer className={styles.button}>
-          <Button onClick={props.onClose}>Okay</Button>
-        </footer>
       </div>
-    </div>
+    </Portal>
   );
 }
